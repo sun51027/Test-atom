@@ -6,7 +6,7 @@
   twoside,
   openright,
   degree    = master,               % degree = master | doctor
-  language  = english,              % language = chinese | english
+  language  = chinese,              % language = chinese | english
   fontset   = template,             % fontset = default | template | system | overleaf
   watermark = false,                 % watermark = true | false
   doi       = false,                 % doi = true | false
@@ -15,6 +15,7 @@
 \input{ntusetup}
 
 \begin{document}
+
 
 % 封面與口試審定
 % Cover and Verification Letter
@@ -31,25 +32,31 @@
 \maketableofcontents                % 目錄（Table of Contents）
 \makelistoffigures                  % 圖目錄（List of Figures）
 \makelistoftables                   % 表目錄（List of Tables）
-% \input{front/denotation}            % 符號列表（Denotation）
+\input{front/denotation}            % 符號列表（Denotation）
 
 % 論文內容
 % Contents of Thesis
 \mainmatter
-\input{contents/chapter01}
-\input{contents/chapter02}
-\input{contents/chapter03}
-\input{contents/chapter04}
+ \input{contents/chapter01}
+ \input{contents/chapter02}
+ \input{contents/chapter03}
+ \input{contents/chapter04}
+
+
 
 % 參考文獻
 % References
 \refmatter
-% \bibliographystyle{abbrv}
-% \bibliography{back/references.bib}
-% \printbibliography
+\sloppy
+% \bibliographystyle{abbrv}  不要管了
+% \bibliography{back/references.bib} 同上
+\printbibliography
+
+
+
 % 附錄
 % Appendices
-% \input{back/appendix01}
-% \input{back/appendix02}
+ \input{back/appendix01}
+ \input{back/appendix02}
 
 \end{document}
